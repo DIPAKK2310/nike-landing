@@ -2,7 +2,10 @@
 
 A sleek and responsive Nike product landing page built using **React**, **Vite**, **Tailwind CSS**, and animated with **Framer Motion**. This project showcases modern UI design, smooth animations, and mobile-first development practices.
 
-![Banner](https://nike-landing-vert-nine.vercel.app/banner-image.png) <!-- (Optional: Replace with a real screenshot URL from your deployed site) -->
+# 👟 Nike Landing Page
+
+![Banner](https://raw.githubusercontent.com/DIPAKK2310/nike-landing/main/src/assets/images/Banner.png)
+
 
 ---
 
