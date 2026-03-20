@@ -37,4 +37,7 @@ A sleek and responsive Nike product landing page built using **React**, **Vite**
 ---
 
 ## 🧾 Folder Structure
+src
+ - assets
+ - componets 
 
