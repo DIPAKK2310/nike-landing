@@ -5,6 +5,7 @@ import icons from '../assets/icons'
  import { Sun, Moon } from "lucide-react"; // if you use lucide icons
 // import Theme_Toggle from '../components/Theme_Toggle';
 import {motion} from 'framer-motion'
+import { Link} from 'react-router-dom';
 const { hamburger } = icons;
 const Navbar = ({className = ""}) => {
   const [isDark, setisDark] = useState(false)  //Not changes the dark/white only for visuals
@@ -12,26 +13,26 @@ const Navbar = ({className = ""}) => {
    <header className='padding-x py-8 absolute z-10 w-full '>
     <nav className='flex justify-between items-center max-container'>
         {/* Logo */}
-        <a href="/" >
+        <Link to="/" >
          <img 
           src={headerLogo}
          alt="Logo" width={130} height={29} />
 
          {/* Nav links  */}
-        </a>
+        </Link>
         <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden '>
             {navLinks.map((item) => (
               <li key={item.label} 
                whileHover={{ scale: 1.1 }}
               transition={{ type: 'spring', stiffness: 300 }}
               >
-                  <a 
-                  href={item.href}
+                  <Link 
+                  to={item.href}
                   className='font-extralight  leading-normal text-black  text-xl hover:text-white-400 hover:bg-zinc-900 rounded-full px-4 py-1 '
                   >
                   {item.label}
                   
-                  </a>
+                  </Link>
               </li>
             ))}
         </ul>
