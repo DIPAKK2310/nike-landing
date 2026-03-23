@@ -1,6 +1,9 @@
 # Nike 2.0
 An ecommerce platform for shoes
 
+## Mono-Repo
+This is the mono repo for the nike an ecommerce platform where the frontend ,backend and databases code exists
+
 ## Client Tech Stack
 
 - ⚛️ **React** — UI framework
