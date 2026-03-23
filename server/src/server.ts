@@ -10,7 +10,7 @@ app.use(express.json());
 const corsOption: CorsOptions = {
   origin:[
  "http://localhost:5173",
-   "https://dipnext.vercel.app"],
+   "https://nike-landing-vert-nine.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 };
