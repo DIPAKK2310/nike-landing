@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import ProductsBanner from '../assets/images/Products_banner.jpg';
 import Products_Scroll from "../components/products/Products_Scroll";
 
-const Products = () => {
+
+const Products = () => {  
   const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+  console.log("Backend URL:", BASE_URL);
   const [products,setProducts] = useState([])
     // 🔥 Fetch from backend
   useEffect(() => {
