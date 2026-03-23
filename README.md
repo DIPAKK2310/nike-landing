@@ -10,3 +10,13 @@ An ecommerce platform for shoes
 - 🌐 **Vercel** — Hosting and CI/CD
 
 ---
+
+## Server Tech Stack
+
+- ⚛️ **NodeJs** — Run time environment
+- ⚡ **Express** — Server Framework
+- 🎨 **MongoDB** — NOSQL Database
+- 🎥 **Docker** — Containerization tool
+- 🌐 **Verc** — Hosting and CI/CD
+
+---
