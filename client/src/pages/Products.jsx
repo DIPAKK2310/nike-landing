@@ -3,14 +3,13 @@ import ProductsBanner from '../assets/images/Products_banner.jpg';
 import Products_Scroll from "../components/products/Products_Scroll";
 
 const Products = () => {
-  const BASE_URL = "http://localhost:5000";
-  const BACKEND_URL = process.env.BACKEND_URL || BASE_URL;
+  const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
   const [products,setProducts] = useState([])
     // 🔥 Fetch from backend
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/products' || `${process.env.BACKEND_URL}/api/products`);
+        const res = await fetch(`${BASE_URL}/api/products`);
         const data = await res.json();
         setProducts(data);
       } catch (error) {
