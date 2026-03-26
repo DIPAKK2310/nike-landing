@@ -4,6 +4,9 @@ In this while we get tha basic requirements of the projects like products,filter
 ## Folder Struture
  ### Client
  - src
+ -
   ### Server
  - src
+    |
+    |__assets
   
