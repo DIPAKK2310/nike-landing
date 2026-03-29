@@ -6,9 +6,8 @@ import productRoutes from "./routes/product.routes"; // ✅ add this
 // 1. Import the necessary modules and types from Express, CORS, and dotenv.
 dotenv.config(); //2 Load environment variables from a .env file into process.env.
 const app: Express = express(); //3. Create an instance of an Express application and assign it to the variable app.
-connectDB(); //4. Call the connectDB function to establish a connection to the database. This function is likely defined in the ./db/index file and is responsible for connecting to the database using the appropriate configuration.
 
-app.use(express.json()); //5. Use the express.json() middleware to parse incoming JSON requests and make the data available in req.body.
+app.use(express.json()); //4. Use the express.json() middleware to parse incoming JSON requests and make the data available in req.body.
 
 const corsOption: CorsOptions = {
   origin:[
@@ -16,19 +15,20 @@ const corsOption: CorsOptions = {
    "https://nike-landing-vert-nine.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
-}; //6. Define a CORS options object that specifies the allowed origins, HTTP methods, and credentials for cross-origin requests.
-app.use(cors(corsOption)); //7. Use the cors middleware with the defined options to enable CORS for the Express application.
-app.use('/images', express.static('public/images')); //8. Serve static files from the public/images directory when requests are made to the /images route.
+}; //5. Define a CORS options object that specifies the allowed origins, HTTP methods, and credentials for cross-origin requests.
+app.use(cors(corsOption)); //6. Use the cors middleware with the defined options to enable CORS for the Express application.
+app.use('/images', express.static('public/images')); //7. Serve static files from the public/images directory when requests are made to the /images route.
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello World");
-}); //9. Define a route handler for the root URL ("/") that sends a "Hello World" response when accessed.
+}); //8. Define a route handler for the root URL ("/") that sends a "Hello World" response when accessed.
 
-app.use("/api/products", productRoutes); //10. Use the productRoutes middleware for any requests that start with /api/products. This means that any routes defined in the productRoutes module will be accessible under the /api/products path.
+app.use("/api/products", productRoutes); //9. Use the productRoutes middleware for any requests that start with /api/products. This means that any routes defined in the productRoutes module will be accessible under the /api/products path.
 
-const PORT: number = Number(process.env.PORT) || 5000; //11. Define a constant PORT that retrieves the port number from the environment variables (process.env.PORT) or defaults to 5000 if the environment variable is not set.
+const PORT: number = Number(process.env.PORT) || 5000; //10. Define a constant PORT that retrieves the port number from the environment variables (process.env.PORT) or defaults to 5000 if the environment variable is not set.
 
 connectDB().then(() =>{
+  console.log("✅DataBase connected successfully")
   app.listen(PORT, () => {
     console.log(`servers is running on http://localhost:${PORT}`);
   });
