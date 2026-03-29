@@ -35,7 +35,7 @@ connectDB().then(() =>{
 }
 
 ).catch((err) => {
-  console.error("Failed to connect to the database:", err);
+  console.error("❌Failed to connect to the database:", err);
   process.exit(1); // Exit the application with a failure code
 }) //12. Call the connectDB function again to ensure that the database connection is established before starting the server. If the connection is successful, the server will start listening on the specified PORT. If there is an error connecting to the database, it will log the error and exit the application with a failure code.
 
