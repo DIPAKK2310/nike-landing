@@ -23,3 +23,4 @@ This is the mono repo for the nike an ecommerce platform where the frontend ,bac
 - 🌐 **Verc** — Hosting and CI/CD
 
 ---
+Deveoped by DK
