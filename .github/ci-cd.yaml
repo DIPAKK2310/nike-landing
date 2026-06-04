@@ -1,3 +1,6 @@
 name: nike-landing-ci-cd
 on: [push]
 jobs: 
+  deploy-nike-landing:
+    runs-on: ubuntu-latest
+  
