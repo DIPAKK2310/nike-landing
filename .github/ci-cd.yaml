@@ -1,1 +1,2 @@
-name : nike-landing-ci-cd
+name: nike-landing-ci-cd
+on: [push]
