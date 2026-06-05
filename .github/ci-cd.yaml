@@ -6,3 +6,6 @@ jobs:
     steps:
       -uses: actions/checkout@v2
       -name: Deploy to Railway Hosting
+      with: {
+          "args": "railway up --project nike-landing"
+        }
