@@ -9,4 +9,9 @@ In this while we get tha basic requirements of the projects like products,filter
  - src
     |
     |__assets
+
+## Products & Store
+ - Shoes
+ - nike
+ - adidas
   
