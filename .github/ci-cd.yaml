@@ -9,3 +9,4 @@ jobs:
       with: {
           "args": "railway up --project nike-landing"
         }
+      
